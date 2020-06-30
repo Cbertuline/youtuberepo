@@ -1,5 +1,4 @@
 package model;
-import java.util.*;
 
 public class DAO {
 
@@ -13,13 +12,13 @@ public class DAO {
 			} else {
 				// wrong pass
 				user newUser = new user (u.getMail(), u.getPass(), "admin");
-				newUser.addError(new error(100, "wrong pass"));
+				newUser.addError(new Error(100, "wrong pass"));
 				return newUser; 
 			}
 		} else {
 			// wrong mail
 			user newUser = new user(u.getMail(), u.getPass(), "admin");
-			newUser.addError(new error(200, "Wrong mail"));
+			newUser.addError(new Error(200, "Wrong mail"));
 			return newUser; 
 		}
 	}

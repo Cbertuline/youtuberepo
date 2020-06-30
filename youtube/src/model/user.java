@@ -15,7 +15,7 @@ public class user {
 		super();
 		this.mail = mail;
 		this.pass = pass;
-		errors = new ArrayList<Error>();
+		errors = new ArrayList<>();
 	}
 
 	// Constructor para ya validado
@@ -24,7 +24,7 @@ public class user {
 		this.mail = mail;
 		this.pass = pass;
 		this.name = name;
-		errors = new ArrayList<Error>();
+		errors = new ArrayList<>();
 	}
 
 	public String getMail() {

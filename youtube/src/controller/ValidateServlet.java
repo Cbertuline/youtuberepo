@@ -1,8 +1,7 @@
 package controller;
 
 import java.util.List;
-import java.io.PrintWriter;
-import model.error;
+import model.Error;
 import model.user;
 import model.DAO;
 import java.io.IOException;
@@ -18,7 +17,7 @@ import javax.servlet.http.HttpSession;
 public class ValidateServlet extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 	throws ServletException, IOException {
-		response.setContentType("text/html;charset=UFT-8");
+		response.setContentType("text/html;charset=UTF-8");
 		String mail;
 		String pass;
 		DAO dao = new DAO();
@@ -51,7 +50,8 @@ public class ValidateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		processRequest(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
